@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif; 
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+.barra{
+    background-color: #808080;
+    height: 5px;
+    width: 250px;  
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight:lighter;
+    font-size: 80px;
+    line-height: 90px /*tamanho do espaçamento entre os titulos h1 do site*/;
+    margin: 0;
+    margin-bottom: 30px; /*separa o h1 do texto dentro do spam, provalmente mudarei para um p*/
+    
+    
+}
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight:bold;
+    font-size: 40px;
+    margin: 0;
+    line-height: 40px;
+    margin: 20px 0;
+    color: #808080;
+   
+}
+a{
+    text-decoration: none;
+}
+.button{
+    display: inline-block;
+    border: 2px solid #808080;
+    padding: 8px 30px;
+    border-radius: 3px;
+    color: #808080;
+    text-decoration: none;
+}
+.button:hover{
+    color: #FFFFFF;
+    background-color: #808080;
+
+}
+header .linha{
+    background-color: #808080;
+    height: 10px;
+}
+.headerArea{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: #FFFFFF;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+}
+.logo img{
+    width: 150px;
+    height: 60px;
+}
+.direitaHeader{
+    display: flex;
+    align-items: center;
+}
+.direitaHeader ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.direitaHeader ul li{
+    margin: 0 5px;
+}
+.direitaHeader ul li a{
+    color:#6e6e6e;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+.direitaHeader ul li a.active,
+.direitaHeader ul li a:hover{
+    background: #d1d3d2;
+    
+
+}
+.menu-btn i{
+    color: #808080;
+    cursor: pointer;
+    display: none;
+}
+@media(max-width: 920px){
+    .direitaHeader .menu-btn i{
+        display: block; /*O icone do menu so aparece quando a tela for menor ou igual a 920px*/
+    }
+    .direitaHeader ul{
+       position: fixed; /*retirar os itens do menu da tela */
+       top: 80px;
+       left: -100%;
+       background-color: #d1d3d2;
+       height: 100vh;
+       width: 100%;
+       text-align: center;
+       display: block;
+       transition: all 0.3s ease;
+    }
+    .direitaHeader ul.open{ /*essa classe sera adicionada com o JS*/
+        left: 0;
+    }
+    .direitaHeader ul li{
+        width: 100%;
+        margin: 50px 0;
+    }
+    .direitaHeader ul li a {
+        font-size: 23px;
+    }
+    .direitaHeader ul li a.active,
+    .direitaHeader ul li a:hover{
+        background: none;
+        color: #808080;
+}
+}
+/*banner style*/
+.banner  {
+    background-image: url(../img/bannerfinal.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 90px; /*da um espaço entre o topo e a img banner*/
+}
+.bannerImagens{
+    margin-top: 60px;
+}
+.bannerImagens img{
+    width: 148px;
+    height: 148px;
+    border:#000000 3px solid;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+/*area1 style*/
+.area1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 10px;
+}
+.area1Conteudo{
+    margin-top: 150px;
+    width: 125%;
+    padding-left: 100px;
+}
+.area1Frase{
+    margin-bottom: 30px;
+}
+.area1Texto{
+    margin-bottom: 50px;
+    line-height: 25px;   
+}
+.area1Imagem1{
+    grid-column: 2/2;
+    grid-row: 1/2;
+    background-image: url(../img/img1.jpg); /* utilizando a imagem como o background da div para torna-lo responsivo*/
+    background-size: cover;
+    background-position: center;  
+    /*border-radius: 5px;*/
+    height: 650px;
+}
+/*area2 style*/
+.area2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 10px;
+}
+.area2Conteudo{
+    margin-top: 150px;
+    width: 125%;
+    padding-left: 100px;
+}
+.area2Texto{
+    margin-bottom: 50px;
+    line-height: 25px;   
+}
+.area2Frase{
+    padding: 5px;
+}
+.area2Imagem1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-image: url(../img/avoebebe.jpg); /* utilizando a imagem como o background da div para torna-lo responsivo*/
+    background-size: cover;
+    background-position: center;  
+    /*border-radius: 5px;*/
+    height: 650px;
+}
+/*area3 style*/
+.area3{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 10px;
+}
+.area3Conteudo{
+    margin-top: 150px;
+    width: 125%;
+    padding-left: 100px;
+}
+.area3Texto{
+    margin-bottom: 50px;
+    line-height: 25px;   
+}
+.area3Imagem1{
+    grid-column: 2/2;
+    grid-row: 1/2;
+    background-image: url(../img/paiefilha.jpg); /* utilizando a imagem como o background da div para torna-lo responsivo*/
+    background-size: cover;
+    background-position: center;  
+   /*border-radius: 5px;*/
+    height: 650px;
+}
+.area4{
+    display: grid;
+    grid-template-columns:40% 60%;
+    margin-top: 10px;
+    background-color: #d1d3d2;
+}
+.area4Conteudo{
+    margin-top: 80px;
+    width: 125%;
+    padding-left: 100px;  
+}
+.area4Texto{
+    margin-bottom: 50px;
+    line-height: 25px;   
+}
+.area4Imagem1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-image: url(../img/fotografa1.jpg); /* utilizando a imagem como o background da div para torna-lo responsivo*/
+    background-size: cover;
+    background-position:left;    
+    height: 550px;   
+}
+footer {
+    background-color:#808080 ;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color:#FFFFFF;
+    
+}
+  
+footer div{
+    margin: 0px 20px;
+    padding: 10px;
+}
+  
+.footRedes img{
+    width: 30px;
+}
+.footRedes{
+    width: 160px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: top;
+}
+  
+.footEmail{
+    width: 160px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: top;
+}
+.galeria{
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    height: 1810px;
+}
+.galeriafotos{
+    width: 0;
+    height: 0;
+    padding: auto;
+}
+.galeriaConteudo p{
+    text-align: center;
+    font-size: 18px;
+   
+}
+.galeria ul{
+    width: 880px;
+    list-style: none;
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+   
+}
+
+.min{
+    width: 200px;
+    padding: 10px;
+}
+.lbox{
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.lbox:target{
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(10, 10, 10, .7); /*Faz a imagem abrir na tela*/
+
+    position: fixed;
+}
+.box_img{
+    width: 600px;
+    margin: 50px auto;
+}
+.btn1{
+    color:#ffffff;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+#prev{
+    left:75%;
+    top: 45%;
+}
+#next{
+    right: 75%;
+    top: 45%;
+}
+#close{
+    top:5%;
+    right: 10%;
+}
+/*Transição de uma div para outra*/
+.box_img img{
+    opacity: 0;
+}
+.lbox:target .box_img img{
+    opacity: 1;
+    transition: opacity .4s linear;
+}
+
+/*Style fotografa*/
+.areafoto1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 10px;
+}
+.areafoto1Conteudo{
+    margin-top: 150px;
+    width: 125%;
+    padding-left: 100px;
+    
+}
+.areafoto1Texto{
+    margin-bottom: 50px;
+    line-height: 25px;   
+}
+.areafoto1Frase{
+    padding: 5px;
+}
+.areafoto1Imagem1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-image: url(../img/fotografa.jpg); /* utilizando a imagem como o background da div para torna-lo responsivo*/
+    background-size: cover;
+    background-position: center;  
+    /*border-radius: 5px;*/
+    height: 650px;
+}
+/*area3 style*/
+.areafoto2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 10px;
+}
+.areafoto2Conteudo{
+    margin-top: 150px;
+    width: 125%;
+    padding-left: 100px;
+}
+.areafoto2Texto{
+    margin-bottom: 50px;
+    line-height: 25px;   
+}
+.areafoto2Imagem1{
+    grid-column: 2/2;
+    grid-row: 1/2;
+    background-image: url(../img/fotografa3.jpg); /* utilizando a imagem como o background da div para torna-lo responsivo*/
+    background-size: cover;
+    background-position: center;  
+   /*border-radius: 5px;*/
+    height: 650px;
+}
+.areafoto3{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 10px;
+}
+.areafoto3Conteudo{
+    margin-top: 150px;
+    width: 125%;
+    padding-left: 100px;
+    
+}
+.areafoto3Texto{
+    margin-bottom: 50px;
+    line-height: 25px;   
+}
+.areafoto3Frase{
+    padding: 5px;
+}
+.areafoto3Imagem1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-image: url(../img/fotografa4.jpg); /* utilizando a imagem como o background da div para torna-lo responsivo*/
+    background-size: cover;
+    background-position: center;  
+    /*border-radius: 5px;*/
+    height: 650px;
+}
+
+/*Style Estúdio*/
+.areaEstudio1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 30px;
+}
+.areaEstudio1Conteudo{
+    margin-top: 150px;
+    width: 125%;
+    padding-left: 100px;
+    
+}
+.areaEstudio1Texto{
+    margin-bottom: 50px;
+    line-height: 25px;   
+}
+.areaEstudio1Frase{
+    padding: 5px;
+}
+.areaEstudio1Imagem1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-image: url(../img/cameraestudio.jpg); /* utilizando a imagem como o background da div para torna-lo responsivo*/
+    background-size: cover;
+    background-position: center;  
+    /*border-radius: 5px;*/
+    height: 650px;
+}
+.areaEstudio2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 10px;
+}
+.areaEstudio2Conteudo{
+    margin-top: 150px;
+    width: 125%;
+    padding-left: 100px;
+}
+.areaEstudio2Texto{
+    margin-bottom: 50px;
+    line-height: 25px;   
+}
+.areaEstudio2Imagem1{
+    grid-column: 2/2;
+    grid-row: 1/2;
+    background-image: url(../img/estudio.jpg); /* utilizando a imagem como o background da div para torna-lo responsivo*/
+    background-size: cover;
+    background-position: center;  
+   /*border-radius: 5px;*/
+    height: 650px;
+}
+.areaEstudio2 a img{
+    width: 50px;
+}
+.areaEstudio2Texto a {
+    width: 110px;
+    padding-bottom: 150px;
+    font-size: 9px;
+    display: inline-block;
+    
+}
+.areaEstudio3{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 10px;
+}
+.areaEstudio3Conteudo{
+    margin-top: 150px;
+    width: 125%;
+    padding-left: 100px;
+    
+}
+.areaEstudio3Texto{
+    margin-bottom: 50px;
+    line-height: 25px;   
+}
+.areaEstudio3Mapa{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-position: center;  
+    /*border-radius: 5px;*/
+}
+
+/*Responsividade */
+@media screen {
+    .container{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    
+}
+
+
