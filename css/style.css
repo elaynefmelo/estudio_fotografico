@@ -160,7 +160,7 @@ header .linha{
     padding-left: 100px;
 }
 .area1Frase{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .area1Texto{
     margin-bottom: 50px;
@@ -191,7 +191,7 @@ header .linha{
     line-height: 25px;   
 }
 .area2Frase{
-    padding: 5px;
+    margin-bottom: 10px;
 }
 .area2Imagem1{
     grid-column: 1/2;
@@ -212,6 +212,9 @@ header .linha{
     margin-top: 150px;
     width: 125%;
     padding-left: 100px;
+}
+.area3Frase{
+    margin-bottom: 10px;
 }
 .area3Texto{
     margin-bottom: 50px;
