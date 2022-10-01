@@ -43,6 +43,7 @@ a{
     border-radius: 3px;
     color: #808080;
     text-decoration: none;
+    padding-bottom: 20px;
 }
 .button:hover{
     color: #FFFFFF;
@@ -158,6 +159,7 @@ header .linha{
     margin-top: 150px;
     width: 125%;
     padding-left: 100px;
+    margin-bottom: 100px;
 }
 .area1Frase{
     margin-bottom: 10px;
@@ -173,7 +175,7 @@ header .linha{
     background-size: cover;
     background-position: center;  
     /*border-radius: 5px;*/
-    height: 650px;
+   
 }
 /*area2 style*/
 .area2{
@@ -185,6 +187,7 @@ header .linha{
     margin-top: 150px;
     width: 125%;
     padding-left: 100px;
+    margin-bottom: 100px;
 }
 .area2Texto{
     margin-bottom: 50px;
@@ -200,7 +203,7 @@ header .linha{
     background-size: cover;
     background-position: center;  
     /*border-radius: 5px;*/
-    height: 650px;
+    
 }
 /*area3 style*/
 .area3{
@@ -212,6 +215,7 @@ header .linha{
     margin-top: 150px;
     width: 125%;
     padding-left: 100px;
+    margin-bottom: 100px;
 }
 .area3Frase{
     margin-bottom: 10px;
@@ -227,7 +231,7 @@ header .linha{
     background-size: cover;
     background-position: center;  
    /*border-radius: 5px;*/
-    height: 650px;
+   
 }
 .area4{
     display: grid;
@@ -238,7 +242,8 @@ header .linha{
 .area4Conteudo{
     margin-top: 80px;
     width: 125%;
-    padding-left: 100px;  
+    padding-left: 100px; 
+    margin-bottom: 100px; 
 }
 .area4Texto{
     margin-bottom: 50px;
@@ -250,7 +255,7 @@ header .linha{
     background-image: url(../img/fotografa1.jpg); /* utilizando a imagem como o background da div para torna-lo responsivo*/
     background-size: cover;
     background-position:left;    
-    height: 550px;   
+      
 }
 footer {
     background-color:#808080 ;
@@ -391,7 +396,7 @@ footer div{
     background-size: cover;
     background-position: center;  
     /*border-radius: 5px;*/
-    height: 650px;
+    
 }
 /*area3 style*/
 .areafoto2{
@@ -415,7 +420,6 @@ footer div{
     background-size: cover;
     background-position: center;  
    /*border-radius: 5px;*/
-    height: 650px;
 }
 .areafoto3{
     display: grid;
@@ -425,8 +429,7 @@ footer div{
 .areafoto3Conteudo{
     margin-top: 150px;
     width: 125%;
-    padding-left: 100px;
-    
+    padding-left: 100px;   
 }
 .areafoto3Texto{
     margin-bottom: 50px;
@@ -442,7 +445,6 @@ footer div{
     background-size: cover;
     background-position: center;  
     /*border-radius: 5px;*/
-    height: 650px;
 }
 
 /*Style Estúdio*/
@@ -471,7 +473,6 @@ footer div{
     background-size: cover;
     background-position: center;  
     /*border-radius: 5px;*/
-    height: 650px;
 }
 .areaEstudio2{
     display: grid;
@@ -494,7 +495,6 @@ footer div{
     background-size: cover;
     background-position: center;  
    /*border-radius: 5px;*/
-    height: 650px;
 }
 .areaEstudio2 a img{
     width: 50px;
@@ -503,8 +503,7 @@ footer div{
     width: 110px;
     padding-bottom: 150px;
     font-size: 9px;
-    display: inline-block;
-    
+    display: inline-block;   
 }
 .areaEstudio3{
     display: grid;
@@ -528,13 +527,77 @@ footer div{
     /*border-radius: 5px;*/
 }
 
+
 /*Responsividade */
-@media screen {
+@media (min-width: 769px) and (max-width: 1140px) {
     .container{
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     
 }
-
-
+@media (min-width: 426px) and (max-width: 768px) {
+    .container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .area1{
+        grid-template-columns: 2fr 1fr;
+    }
+    .area2{
+        grid-template-columns: 1fr 2fr;
+    }
+    .area3{
+        grid-template-columns: 2fr 1fr;
+    }
+    .area4{
+        grid-template-columns: 1fr 2fr;
+    }
+    .areafoto1{
+        grid-template-columns: 1fr 2fr;
+    }
+    .areafoto2{
+        grid-template-columns: 2fr 1fr;
+    }
+    .areafoto3{
+        grid-template-columns: 1fr 2fr;
+    }    
+    .areaEstudio1{
+        grid-template-columns: 1fr 2fr;
+    }
+    .areaEstudio2{
+        grid-template-columns: 2fr 1fr;
+    }
+    .AreaEstudio3
+    {
+        grid-template-columns: 1fr 2fr;
+    }    
+}
+@media (max-width: 426px) {
+    .container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    h1{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .bannerImagens img{
+        width: 50px;
+        height: 50px;
+        border:#000000 3px solid;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .area1, .area2, .area3, .area4{
+        grid-template-columns: 1fr;
+    }
+    .area1Conteudo, .area2Conteudo, .area3Conteudo, .area4Conteudo{
+        margin-top: 80px;
+        width: 100%;
+        padding: 20px;
+    }
+    .footEmail {
+        font-size: 10px;
+    }
+}
