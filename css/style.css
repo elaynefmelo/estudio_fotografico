@@ -573,7 +573,7 @@ footer div{
         grid-template-columns: 1fr 2fr;
     }    
 }
-@media (max-width: 426px) {
+@media (max-width: 425px) {
     .container{
         padding-left: 20px;
         padding-right: 20px;
